@@ -25,7 +25,7 @@ def lambda_handler(event, context):
         response = ssm.send_command(
             InstanceIds=[instanceid],
             DocumentName="AWS-RunShellScript",
-            Parameters={'commands': ['sudo mkdir /home/testing']}, )
+            Parameters={'commands': ['commands']}, )
 
         # fetching command id for the output
         command_id = response["Command"]["CommandId"]
